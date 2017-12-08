@@ -1,0 +1,48 @@
+﻿<Controls:MetroWindow x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="317.7" Width="287.2" BorderBrush="Black" WindowStartupLocation="CenterScreen" Icon="/icon/Calculator1.ico" ResizeMode="NoResize"
+        GlowBrush="{DynamicResource AccentColorBrush}">
+    <DockPanel>
+        <Label DockPanel.Dock="Top" x:Name="Label1"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Height="32" FontSize="20"/>
+        <TextBox  DockPanel.Dock="Top" x:Name="txtResult" IsReadOnly="True" TextAlignment="Right" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" BorderThickness="1" FontSize="30" Height="49" Width="Auto">0</TextBox>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button x:Name="Button1" Grid.Row="0" Grid.Column="0" Click="BNumber" FontWeight="Bold" FontSize="18" Margin="0,-1,0,1">7</Button>
+            <Button x:Name="Button2" Grid.Row="0" Grid.Column="1" Click="BNumber" FontWeight="Bold" FontSize="18">8</Button>
+            <Button x:Name="Button3" Grid.Row="0" Grid.Column="2" Click="BNumber" FontWeight="Bold" FontSize="18">9</Button>
+            <Button x:Name="Button4" Grid.Row="1" Grid.Column="0" Click="BNumber" FontWeight="Bold" FontSize="18">4</Button>
+            <Button x:Name="Button5" Grid.Row="1" Grid.Column="1" Click="BNumber" FontWeight="Bold" FontSize="18">5</Button>
+            <Button x:Name="Button6" Grid.Row="1" Grid.Column="2" Click="BNumber" FontWeight="Bold" FontSize="18">6</Button>
+            <Button x:Name="Button7" Grid.Row="2" Grid.Column="0" Click="BNumber" FontWeight="Bold" FontSize="18">1</Button>
+            <Button x:Name="Button8" Grid.Row="2" Grid.Column="1" Click="BNumber" FontWeight="Bold" FontSize="18">2</Button>
+            <Button x:Name="Button9" Grid.Row="2" Grid.Column="2" Click="BNumber" FontWeight="Bold" FontSize="18">3</Button>
+            <Button x:Name="Button10" Grid.Row="3" Grid.Column="1" Click="BNumber" FontWeight="Bold" FontSize="18">0</Button>
+
+            <Button x:Name="ButtonAdd" Grid.Row="0" Grid.Column="3" Click="ButtonAdd_Click" FontWeight="Bold" FontSize="18">+</Button>
+            <Button x:Name="ButtonSubtract" Grid.Row="1" Grid.Column="3" Click="ButtonSubtract_Click" FontWeight="Bold" FontSize="18">-</Button>
+            <Button x:Name="ButtonMultiply" Grid.Row="2" Grid.Column="3" Click="ButtonMultiply_Click" FontWeight="Bold" FontSize="18">*</Button>
+            <Button x:Name="ButtonDivision" Grid.Row="3" Grid.Column="3" Click="ButtonDivision_Click" FontWeight="Bold" FontSize="18">/</Button>
+            <Button x:Name="ButtonEquals" Grid.Row="3" Grid.Column="2" Click="ButtonEquals_Click" FontWeight="Bold" FontSize="18">=</Button>
+
+            <Button x:Name="ButtonClear" Grid.Row="3" Grid.Column="0" Click="ButtonClear_Click" FontWeight="Bold" FontSize="18">C</Button>
+
+        </Grid>
+    </DockPanel>
+</Controls:MetroWindow>
